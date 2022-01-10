@@ -1,0 +1,79 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use 'sass:math';
+
+// Normal type across browsers
+*,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var.$font-family-base;
+  background-color: var.$background-color-primary;
+  color: var.$text-color-base;
+  line-height: var.$line-height-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+
+  &:first-child {
+    margin-bottom: 0;
+  }
+}
+
+h1 {
+  font-size: var.$heading-size;
+  margin-bottom: math.div(var.$gutter-base, 2);
+}
+
+h2 {
+  font-size: math.div(var.$heading-size, 1.3);
+  font-weight: var.$font-weight-medium;
+}
+
+h3 {
+  font-size: math.div(var.$heading-size, 1.5);
+}
+
+h4 {
+  font-size: math.div(var.$heading-size, 1.7);
+}
+
+h5 {
+  font-size: math.div(var.$heading-size, 1.8);
+}
+
+h6 {
+  font-size: math.div(var.$heading-size, 2);
+}
+
+p {
+  line-height: var.$line-height-base;
+  margin-bottom: math.div(var.$gutter-base, 1.5);
+  &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+ul {
+  display: flex;
+  li {
+    list-style-type: none;
+    &:not(:last-child) {
+      margin-right: math.div(var.$gutter-base, 2);
+    }
+  }
+}

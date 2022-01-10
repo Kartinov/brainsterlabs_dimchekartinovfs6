@@ -1,0 +1,45 @@
+@use 'sass:math';
+
+@function rem-calc($size) {
+  @return (math.div($size, 16)) * 1rem;
+}
+
+// Font settings
+$font-family-base:           'Ubuntu', sans-serif;
+
+$font-size-small:            rem-calc(14);
+$font-size-base:             rem-calc(16);
+$font-size-medium:           rem-calc(18);
+$font-size-big:              rem-calc(22);
+
+$heading-size:                rem-calc(40);
+
+$line-height-base:           1.5;
+
+$font-weight-normal:         400;
+$font-weight-medium:         600;
+$font-weight-bold:           700;
+
+// Size settings
+$gutter-base:                rem-calc(30);
+$border-radius:              5px;
+
+// Color settings
+$text-color-base:            rgb(27, 28, 29);
+$text-color-primary:         #fff;
+$text-color-secondary:       rgb(204, 204, 204);
+
+$background-color-base:      #FFF;
+$background-color-primary:   rgb(252, 210, 50);
+$background-color-secondary: rgb(255, 19, 0);
+$background-color-chili:     #eb3b3b;
+
+// Breakpoints
+$breakpoints: (
+  'small':      576px,
+  'medium':     768px,
+  'large':      992px,
+  'x-large':    1200px,
+  'xx-large':   1400px,
+) !default;
+
