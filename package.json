@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass -w assets/scss:assets/css"
+    "compile:sass": "sass -w assets/scss:assets/css",
+    "autoprefixer": "postcss assets/css/main.css --use autoprefixer -d assets/css/main.css"
   },
   "keywords": [
-    "sass",
-    "bootstrap-4"
+    "sass"
   ],
   "author": "Dimche Kartinov",
   "license": "MIT",
@@ -18,7 +18,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "autoprefixer": "^10.4.2",
-    "bootstrap": "^4.6.1",
     "postcss-cli": "^9.1.0"
   }
 }

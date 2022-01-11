@@ -1,5 +1,4 @@
-
-
+// Mobile First Responsivness
 @mixin style-from($breakpoint) {
   // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
