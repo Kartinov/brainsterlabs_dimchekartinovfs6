@@ -1,23 +1,25 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body { margin: 0; }
+body {
+  margin: 0;
+}
 
 h1,
 h2,
 h3,
 p,
-ul { margin-top: 0; }
-
 ul {
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-a {
-  text-decoration: none;
+  margin-top: 0;
 }
 
 img {
   display: block;
   width: 100%;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
 }

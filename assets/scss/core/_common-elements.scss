@@ -64,16 +64,27 @@ p {
   line-height: var.$line-height-base;
   margin-bottom: math.div(var.$gutter-base, 1.5);
   &:last-of-type {
-        margin-bottom: 0;
-    }
+    margin-bottom: 0;
+  }
 }
 
-ul {
-  display: flex;
-  li {
-    list-style-type: none;
-    &:not(:last-child) {
-      margin-right: math.div(var.$gutter-base, 2);
-    }
+a {
+  color: var.$text-color-base;
+  text-decoration: none;
+  display: inline-block;
+}
+
+// Buttons
+.btn {
+  padding: (math.div(var.$gutter-base, 3)) (math.div(var.$gutter-base, 2));
+  color: var.$text-color-primary;
+  background-color: var.$background-color-secondary;
+  border: none;
+  border-radius: var.$radius;
+  font-weight: var.$font-weight-medium;
+  cursor: pointer;
+  transition: background-color var.$transition-normal ease-out;
+  &:hover {
+    background-color: darken(var.$background-color-secondary, 10%);
   }
 }

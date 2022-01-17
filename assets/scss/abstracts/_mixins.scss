@@ -1,16 +1,32 @@
-// Mobile First Responsivness
-@mixin style-from($breakpoint) {
-  // If the key exists in the map
-  @if map-has-key($breakpoints, $breakpoint) {
-    // Prints a media query based on the value
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
-      @content;
-    }
-  }
- 
-  // If the key doesn't exist in the map
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+@mixin breakpoint($breakpoint, $direction) {
+  @if map-has-key(var.$breakpoints, $breakpoint) {
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get(var.$breakpoints, $breakpoint);
+    
+    @if $direction == max {
+      @media (max-width: ($breakpoint-value - 1)) {
+        @content;
+      }
+    } @else if $direction == min {      
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+    } 
+  
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+    @if $direction == max {
+      @media (max-width: $breakpoint) {
+        @content;
+      }
+    } @else if $direction == min {      
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    }  
   }
 }
