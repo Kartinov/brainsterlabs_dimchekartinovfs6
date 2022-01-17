@@ -1,11 +1,13 @@
 {
-  "name": "project01",
+  "name": "brainster_labs_project01",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "index.html",
+    "server": "live-server",
     "compile:sass": "sass -w assets/scss:assets/css",
-    "autoprefixer": "postcss assets/css/main.css --use autoprefixer -d assets/css/main.css"
+    "autoprefixer": "postcss assets/css/main.css --use autoprefixer -d assets/css"
   },
   "keywords": [
     "sass"
@@ -13,6 +15,7 @@
   "author": "Dimche Kartinov",
   "license": "MIT",
   "devDependencies": {
+    "live-server": "^1.2.1",
     "sass": "^1.47.0"
   },
   "dependencies": {
