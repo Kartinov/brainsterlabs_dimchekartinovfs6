@@ -19,8 +19,8 @@ header {
 
     padding: math.div(var.$gutter-base, 2);
     @include mix.breakpoint('custom-medium', min) {
-      padding-top: var.$gutter-base;
-      padding-bottom: var.$gutter-base;
+      padding-top: math.div(var.$gutter-base, 1.5);
+      padding-bottom: math.div(var.$gutter-base, 1.5);
     }
 
     @include mix.breakpoint('x-large', min) {
@@ -34,7 +34,7 @@ header {
     }
 
     .logo {
-      width: clamp((var.$gutter-base * 1.7), 8vw, (var.$gutter-base * 2.5));
+      width: clamp((var.$gutter-base * 1.7), 5vw, (var.$gutter-base * 2.5));
     }
 
     ul.nav-menu-items {
@@ -108,7 +108,7 @@ header {
           margin-top: 0;
         }
         @include mix.breakpoint('large', min) {
-          margin-left: clamp(var.$gutter-base, 10vw, (var.$gutter-base * 3));
+         margin-left: clamp(var.$gutter-base, 10vw, (var.$gutter-base * 3));
         }
       }
 

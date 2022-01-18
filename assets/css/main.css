@@ -130,8 +130,8 @@ header .nav-wrapper {
 }
 @media (min-width: 810px) {
   header .nav-wrapper {
-    padding-top: 1.875rem;
-    padding-bottom: 1.875rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }
 @media (min-width: 1200px) {
@@ -147,7 +147,7 @@ header .nav-wrapper {
   }
 }
 header .nav-wrapper .logo {
-  width: clamp(3.1875rem, 8vw, 4.6875rem);
+  width: clamp(3.1875rem, 5vw, 4.6875rem);
 }
 header .nav-wrapper ul.nav-menu-items {
   list-style: none;

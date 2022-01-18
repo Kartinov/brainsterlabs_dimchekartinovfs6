@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "index.html",
+    "start": "node index.js",
     "server": "live-server",
     "compile:sass": "sass -w assets/scss:assets/css",
     "autoprefixer": "postcss assets/css/main.css --use autoprefixer -d assets/css"
