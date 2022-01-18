@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as var;
+@use 'sass:math';
+
+section.hero-image {
+  background-image: #{var.$img-darken}, url('#{var.$img-folder}hero-image.jpg');
+  background-color: var.$text-color-base;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: clamp(250px, 35vw, 500px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1.hero-title {
+    user-select: none;
+    color: var.$text-color-primary;
+    font-size: var.$display-big;
+    padding-left: math.div(var.$gutter-base, 2);
+    padding-right: math.div(var.$gutter-base, 2);
+  }
+}

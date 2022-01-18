@@ -14,6 +14,8 @@ $font-size-big:              rem-calc(22);
 
 $heading-size:               rem-calc(40);
 
+$display-big:                clamp(($heading-size - 0.3rem), 10vw, ($heading-size * 2));
+
 $line-height-normal:         1.2;
 $line-height-base:           1.5;
 
@@ -31,6 +33,9 @@ $transition-normal:          0.2s;
 // Shadow
 $shadow-bottom:              0px 12px 15px -15px;
 
+// Darken background image
+$img-darken:                 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
 // Color settings
 $text-color-base:            rgb(55, 56, 58);
 $text-color-base-hover:      darken($text-color-base, 15%);
@@ -41,6 +46,9 @@ $background-color-base:      #FFF;
 $background-color-primary:   rgb(252, 210, 50);
 $background-color-secondary: rgb(255, 19, 0);
 $background-color-chili:     #eb3b3b;
+
+// Paths
+$img-folder:                 "../img/";
 
 // Breakpoints
 $breakpoints: (
