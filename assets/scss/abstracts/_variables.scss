@@ -45,7 +45,7 @@ $text-color-secondary:       rgb(204, 204, 204);
 $background-color-base:      #FFF;
 $background-color-primary:   rgb(252, 210, 50);
 $background-color-secondary: rgb(255, 19, 0);
-$background-color-chili:     #eb3b3b;
+$background-color-chili:     #ff3b3b;
 
 // Paths
 $img-folder:                 "../img/";
@@ -57,6 +57,7 @@ $breakpoints: (
   'large':         992px,
   'x-large':       1200px,
   'xx-large':      1400px,
+  'custom-small':  410px,
   'custom-medium': 810px,
 ) !default;
 

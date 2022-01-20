@@ -1,0 +1,92 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use 'sass:math';
+
+.card-menu {
+  button.trigger {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+
+    text-align: left;
+    font-size: clamp(var.$font-size-small, 3vw, var.$font-size-base);
+    font-weight: var.$font-weight-medium;
+    background-color: var.$text-color-base;
+    color: var.$text-color-primary;
+
+    padding-top: var.$gutter-base;
+    padding-bottom: var.$gutter-base;
+    padding-right: (var.$gutter-base * 2);
+    padding-left: (math.div(var.$gutter-base, 2));
+    br {
+      display: none;
+      @include mix.breakpoint('custom-small', 'min') {
+        display: inline-block;
+      }
+      @include mix.breakpoint('small', 'min') {
+        display: none;
+      }
+      @include mix.breakpoint('x-large', min) {
+        display: inline-block;
+      }
+    }
+    &:not(:last-child) {
+      border-bottom: 2px solid lighten(var.$text-color-base, 5%);
+      @include mix.breakpoint('medium', 'min') {
+        border-bottom: none;
+        border-right: 2px solid lighten(var.$text-color-base, 5%);
+      }
+    }
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: var.$gutter-base;
+      visibility: hidden;
+      color: var.$text-color-base;
+      font-size: math.div(var.$heading-size, 1.5);
+      @include mix.breakpoint('custom-small', 'min') {
+        font-size: var.$heading-size;
+      }
+      @include mix.breakpoint('medium', 'min') {
+        right: (math.div(var.$gutter-base, 2));
+      }
+      @include mix.breakpoint('x-large', 'min') {
+        right: var.$gutter-base;
+      }
+    }
+    &:hover {
+      background-color: lighten(var.$text-color-base, 5%);
+    }
+
+    &.checked {
+      border-color: transparent;
+      color: var.$text-color-base;
+      background-color: var.$background-color-chili;
+      transition: background var.$transition-normal ease-in-out;
+      & i {
+        visibility: visible;
+      }
+      &:hover {
+        background-color: lighten(var.$background-color-chili, 2%);
+      }
+    }
+    @include mix.breakpoint('small', min) {
+      display: flex;
+    }
+  }
+  @include mix.breakpoint('medium', min) {
+    display: flex;
+  }
+}
+
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   .card {
+    flex: 0 1 33.333%;
+}
+}

@@ -291,7 +291,7 @@ header .nav-wrapper .menu-btn.open span:nth-child(3) {
   width: 56px;
 }
 header .nav-wrapper .menu-btn.open:hover span {
-  background-color: #eb3b3b;
+  background-color: #ff3b3b;
 }
 @media (min-width: 810px) {
   header .nav-wrapper .menu-btn {
@@ -316,6 +316,108 @@ section.hero-image h1.hero-title {
   font-size: clamp(2.2rem, 10vw, 5rem);
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
+}
+
+.card-menu button.trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  font-weight: 600;
+  background-color: #37383a;
+  color: #fff;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  padding-right: 3.75rem;
+  padding-left: 0.9375rem;
+}
+.card-menu button.trigger br {
+  display: none;
+}
+@media (min-width: 410px) {
+  .card-menu button.trigger br {
+    display: inline-block;
+  }
+}
+@media (min-width: 576px) {
+  .card-menu button.trigger br {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .card-menu button.trigger br {
+    display: inline-block;
+  }
+}
+.card-menu button.trigger:not(:last-child) {
+  border-bottom: 2px solid #434547;
+}
+@media (min-width: 768px) {
+  .card-menu button.trigger:not(:last-child) {
+    border-bottom: none;
+    border-right: 2px solid #434547;
+  }
+}
+.card-menu button.trigger i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.875rem;
+  visibility: hidden;
+  color: #37383a;
+  font-size: 1.6666666667rem;
+}
+@media (min-width: 410px) {
+  .card-menu button.trigger i {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .card-menu button.trigger i {
+    right: 0.9375rem;
+  }
+}
+@media (min-width: 1200px) {
+  .card-menu button.trigger i {
+    right: 1.875rem;
+  }
+}
+.card-menu button.trigger:hover {
+  background-color: #434547;
+}
+.card-menu button.trigger.checked {
+  border-color: transparent;
+  color: #37383a;
+  background-color: #ff3b3b;
+  transition: background 0.2s ease-in-out;
+}
+.card-menu button.trigger.checked i {
+  visibility: visible;
+}
+.card-menu button.trigger.checked:hover {
+  background-color: #ff4545;
+}
+@media (min-width: 576px) {
+  .card-menu button.trigger {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .card-menu {
+    display: flex;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards .card {
+  flex: 0 1 33.333%;
 }
 
 /*# sourceMappingURL=main.css.map */
