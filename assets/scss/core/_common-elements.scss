@@ -2,20 +2,13 @@
 @use '../abstracts/mixins' as mix;
 @use 'sass:math';
 
-// Normal type across browsers
-*,
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
 body {
   font-family: var.$font-family-base;
   background-color: var.$background-color-primary;
   color: var.$text-color-base;
-  line-height: var.$line-height-base;
+  line-height: var.$line-height-normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -29,7 +22,7 @@ h6 {
     text-transform: capitalize;
   }
 
-  &:first-child {
+  &:only-child {
     margin-bottom: 0;
   }
 }
@@ -82,6 +75,7 @@ a {
   border: none;
   border-radius: var.$radius;
   font-weight: var.$font-weight-medium;
+  user-select: none;
   cursor: pointer;
   transition: background-color var.$transition-normal ease-out;
   &:hover {

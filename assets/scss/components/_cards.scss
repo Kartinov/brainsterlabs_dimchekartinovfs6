@@ -22,10 +22,10 @@
     padding-left: (math.div(var.$gutter-base, 2));
     br {
       display: none;
-      @include mix.breakpoint('custom-small', 'min') {
+      @include mix.breakpoint('custom-small', min) {
         display: inline-block;
       }
-      @include mix.breakpoint('small', 'min') {
+      @include mix.breakpoint('small', min) {
         display: none;
       }
       @include mix.breakpoint('x-large', min) {
@@ -34,7 +34,7 @@
     }
     &:not(:last-child) {
       border-bottom: 2px solid lighten(var.$text-color-base, 5%);
-      @include mix.breakpoint('medium', 'min') {
+      @include mix.breakpoint('medium', min) {
         border-bottom: none;
         border-right: 2px solid lighten(var.$text-color-base, 5%);
       }
@@ -47,13 +47,13 @@
       visibility: hidden;
       color: var.$text-color-base;
       font-size: math.div(var.$heading-size, 1.5);
-      @include mix.breakpoint('custom-small', 'min') {
+      @include mix.breakpoint('custom-small', min) {
         font-size: var.$heading-size;
       }
-      @include mix.breakpoint('medium', 'min') {
+      @include mix.breakpoint('medium', min) {
         right: (math.div(var.$gutter-base, 2));
       }
-      @include mix.breakpoint('x-large', 'min') {
+      @include mix.breakpoint('x-large', min) {
         right: var.$gutter-base;
       }
     }
@@ -73,20 +73,143 @@
         background-color: lighten(var.$background-color-chili, 2%);
       }
     }
-    @include mix.breakpoint('small', min) {
-      display: flex;
-    }
   }
+
   @include mix.breakpoint('medium', min) {
     display: flex;
   }
 }
 
-.cards {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   .card {
-    flex: 0 1 33.333%;
+.wrapper {
+  margin-top: var.$gutter-base;
+  margin-bottom: (var.$gutter-base * 2);
+  padding-left: var.$gutter-base;
+  padding-right: var.$gutter-base;
+
+  @include mix.breakpoint('small', min) {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mix.breakpoint('medium', min) {
+    max-width: 1200px;
+  }
+
+  @include mix.breakpoint('large', min) {
+    
+  }
+
+  .sub-heading {
+    margin-bottom: var.$gutter-base;
+    font-size: var.$heading-size;
+    @include mix.breakpoint('small', min) {
+      text-align: center;
+    }
+    @include mix.breakpoint('x-large', min) {
+      font-size: var.$heading-size * 1.2;
+    }
+  }
 }
+
+.cards {
+   @include mix.breakpoint('medium', min) {
+        margin-right: -(var.$gutter-base);
+      }
+  .card {
+    &-inner {
+      display: block;
+      border-radius: var.$radius * 3;
+      overflow: hidden;
+      box-shadow: var.$shadow-card;
+      transition: transform var.$transition-normal * 2;
+      &:hover {
+        transform: scaleY(1.03);
+        @include mix.breakpoint('small', min) {
+          transform: scale(1.03);
+        }
+      }
+
+      @include mix.breakpoint('medium', min) {
+        margin-right: var.$gutter-base;
+      }
+    }
+
+    &-thumbnail {
+      width: 100%;
+    }
+
+    &-info {
+      background: var.$background-color-base;
+      padding: math.div(var.$gutter-base, 1.5);
+
+      & > *:not(:last-child) {
+        margin-bottom: math.div(var.$gutter-base, 2);
+      }
+
+      span {
+        display: inline-block;
+        &.academy {
+          background-color: var.$background-color-primary;
+          padding: var.$radius * 2;
+          border-radius: var.$radius;
+          color: darken(var.$text-color-base, 50%);
+        }
+        &.date {
+          font-weight: var.$font-weight-medium;
+          display: block;
+        }
+      }
+
+      .card-title {
+        font-size: math.div(var.$heading-size, 2);
+      }
+
+      .btn-wrap {
+        text-align: right;
+        .btn {
+          border: 1px solid transparent;
+          transition-property: color border;
+          transition-duration: var.$transition-normal * 2;
+          font-size: var.$font-size-base;
+          &:hover {
+            background-color: transparent;
+            border: 1px solid var.$background-color-secondary;
+            color: var.$background-color-secondary;
+          }
+        }
+      }
+    }
+
+    @include mix.breakpoint('medium', max) {
+      &:nth-child(n + 2) {
+        margin-top: var.$gutter-base * 2;
+      }
+    }
+
+    @include mix.breakpoint('large', max) {
+      &:nth-child(n + 3) {
+        margin-top: var.$gutter-base * 2;
+      }
+    }
+
+     @include mix.breakpoint('large', min) {
+      &:nth-child(n + 4) {
+        margin-top: var.$gutter-base;
+      }
+    }
+
+    @include mix.breakpoint('medium', min) {
+      flex: 0 1 50%;
+    }
+
+    @include mix.breakpoint('large', min) {
+      flex: 0 1 33.333%;
+    }
+  }
+
+  @include mix.breakpoint('medium', min) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

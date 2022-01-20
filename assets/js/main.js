@@ -2,7 +2,7 @@ let projects = [
   {
     id: 1,
     category: 'marketing',
-    img: 'marketing.jpg',
+    thumbnail: 'marketing.jpg',
     academy: 'Академија за маркетинг',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -11,7 +11,7 @@ let projects = [
   {
     id: 2,
     category: 'marketing',
-    img: 'marketing.jpg',
+    thumbnail: 'marketing.jpg',
     academy: 'Академија за маркетинг',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -20,7 +20,7 @@ let projects = [
   {
     id: 3,
     category: 'marketing',
-    img: 'marketing.jpg',
+    thumbnail: 'marketing.jpg',
     academy: 'Академија за маркетинг',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -29,7 +29,7 @@ let projects = [
   {
     id: 4,
     category: 'marketing',
-    img: 'marketing.jpg',
+    thumbnail: 'marketing.jpg',
     academy: 'Академија за маркетинг',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -38,7 +38,7 @@ let projects = [
   {
     id: 5,
     category: 'marketing',
-    img: 'marketing.jpg',
+    thumbnail: 'marketing.jpg',
     academy: 'Академија за маркетинг',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -47,7 +47,7 @@ let projects = [
   {
     id: 6,
     category: 'marketing',
-    img: 'marketing.jpg',
+    thumbnail: 'marketing.jpg',
     academy: 'Академија за маркетинг',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -56,7 +56,7 @@ let projects = [
   {
     id: 7,
     category: 'design',
-    img: 'design.png',
+    thumbnail: 'design.png',
     academy: 'Академија за дизајн',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -65,7 +65,7 @@ let projects = [
   {
     id: 8,
     category: 'design',
-    img: 'design.png',
+    thumbnail: 'design.png',
     academy: 'Академија за дизајн',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -74,7 +74,7 @@ let projects = [
   {
     id: 9,
     category: 'design',
-    img: 'design.png',
+    thumbnail: 'design.png',
     academy: 'Академија за дизајн',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -83,7 +83,7 @@ let projects = [
   {
     id: 10,
     category: 'design',
-    img: 'design.png',
+    thumbnail: 'design.png',
     academy: 'Академија за дизајн',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -92,7 +92,7 @@ let projects = [
   {
     id: 10,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -101,7 +101,7 @@ let projects = [
   {
     id: 11,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -110,7 +110,7 @@ let projects = [
   {
     id: 12,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -119,7 +119,7 @@ let projects = [
   {
     id: 13,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -128,7 +128,7 @@ let projects = [
   {
     id: 14,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -137,7 +137,7 @@ let projects = [
   {
     id: 15,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -146,7 +146,7 @@ let projects = [
   {
     id: 16,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -155,7 +155,7 @@ let projects = [
   {
     id: 17,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -164,7 +164,7 @@ let projects = [
   {
     id: 18,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -173,7 +173,7 @@ let projects = [
   {
     id: 19,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -182,7 +182,7 @@ let projects = [
   {
     id: 20,
     category: 'coding',
-    img: 'coding.jpg',
+    thumbnail: 'coding.jpg',
     academy: 'Академија за програмирање',
     title: 'Име на проектот стои овде во две линии',
     description: 'Краток опис во кој студентите ке можат да опишат за што се работи во проектот.',
@@ -249,18 +249,20 @@ function filterProjects() {
   $.each(items, function (index, project) {
     $('.cards').append(
       `
-        <div href="#" class="card">
-          <div class="card-inner">
-            <img src="./assets/img/${project.img}" alt="">
+        <article class="card">
+          <a href="#" class="card-inner">
+            <img class="card-thumbnail" src="./assets/img/${project.thumbnail}" alt="">
             <div class="card-info">
               <span class="academy">${project.academy}</span>
-              <h3 class="title">${project.title}</h3>
-              <p>${project.description}</p>
-              <p class="date">${project.date}</p>
-              <a href="/projects/${project.id}" class="btn">Дознај повеќе</a>
-           </div>
-         </div>
-       </div>
+              <h3 class="card-title">${project.title}</h3>
+              <p class="description">${project.description}</p>
+              <span class="date">${project.date}</span>
+              <div class="btn-wrap">
+                <button class="btn">Дознај повеќе</button>
+              </div>
+            </div>
+          </a>
+        </article>
   `
     );
   });
