@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use 'sass:math';
+
+footer {
+  text-align: center;
+  background-color: var.$text-color-base;
+  color: var.$text-color-primary;
+  p {
+    padding: (math.div(var.$gutter-base, 3)) (math.div(var.$gutter-base, 2));
+    font-size: var.$font-size-small;
+    @include mix.breakpoint('custom-small', min) {
+      font-size: var.$font-size-base;
+    }
+  }
+  i {
+    margin-right: math.div(var.$radius, 2);
+    margin-left: math.div(var.$radius, 2);
+    color: var.$background-color-secondary;
+  }
+}
