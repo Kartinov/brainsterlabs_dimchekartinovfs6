@@ -93,11 +93,10 @@
   }
 
   @include mix.breakpoint('medium', min) {
-    max-width: 1200px;
+    max-width: 1100px;
   }
 
   @include mix.breakpoint('large', min) {
-    
   }
 
   .sub-heading {
@@ -113,9 +112,9 @@
 }
 
 .cards {
-   @include mix.breakpoint('medium', min) {
-        margin-right: -(var.$gutter-base);
-      }
+  @include mix.breakpoint('medium', min) {
+    margin-right: -(var.$gutter-base);
+  }
   .card {
     &-inner {
       display: block;
@@ -136,7 +135,23 @@
     }
 
     &-thumbnail {
-      width: 100%;
+      background: linear-gradient(45deg, var.$background-color-base, var.$background-color-primary);
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 200px;
+        @include mix.breakpoint('custom-small', min) {
+          height: 250px;
+        }
+        @include mix.breakpoint('medium', min) {
+          height: 200px;
+        }
+        &[alt] {
+          font-size: var.$font-size-medium;
+          font-weight: var.$font-weight-medium;
+          text-align: center;
+        }
+      }
     }
 
     &-info {
@@ -193,7 +208,7 @@
       }
     }
 
-     @include mix.breakpoint('large', min) {
+    @include mix.breakpoint('large', min) {
       &:nth-child(n + 4) {
         margin-top: var.$gutter-base;
       }
