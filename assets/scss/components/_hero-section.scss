@@ -13,10 +13,10 @@ section.hero-image {
   justify-content: center;
   align-items: center;
   h1.hero-title {
-    user-select: none;
-    color: var.$text-color-primary;
-    font-size: var.$display-big;
     padding-left: math.div(var.$gutter-base, 2);
     padding-right: math.div(var.$gutter-base, 2);
+    font-size: var.$display-big;
+    user-select: none;
+    color: var.$text-color-primary;
   }
 }

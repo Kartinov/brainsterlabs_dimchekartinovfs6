@@ -1,0 +1,84 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use 'sass:math';
+.form-wrapper {
+  .hero-title {
+    text-align: center;
+    font-size: var.$display-medium;
+    margin-top: var.$gutter-base * 2;
+    margin-bottom: var.$gutter-base * 2;
+  }
+}
+
+form {
+  .form-group {
+    &:not(:first-child, :last-child) {
+      margin-top: math.div(var.$gutter-base, 2);
+    }
+    &:last-child {
+      margin-top: (var.$gutter-base * 1.5);
+    }
+  }
+
+  label {
+    margin-bottom: math.div(var.$gutter-base, 2);
+    font-size: var.$font-size-medium;
+    font-weight: var.$font-weight-medium;
+  }
+
+  .select {
+    position: relative;
+    select {
+      color: var.$text-color-base;
+      font-weight: var.$font-weight-medium;
+      background-color: var.$background-color-base;
+    }
+    &::after {
+      content: '\25BC';
+      position: absolute;
+      right: math.div(var.$gutter-base, 2);
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &:hover::after {
+      color: var.$background-color-secondary;
+    }
+  }
+
+  input,
+  select,
+  .btn {
+    padding: math.div(var.$gutter-base, 2);
+      font-size: var.$font-size-base;
+
+  }
+
+  input,
+  select {
+    border-radius: var.$radius;
+  }
+
+  .btn {
+    text-transform: uppercase;
+    font-weight: var.$font-weight-bold;
+    display: block;
+    width: 100%;
+  }
+
+  @include mix.breakpoint('medium', min) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    .form-group {
+      flex: 0 1 50%;
+      &:nth-child(2n + 1) {
+        padding-right: 15px;
+      }
+      &:last-child {
+        margin-top: 0;
+        align-self: flex-end;
+      }
+    }
+  }
+}

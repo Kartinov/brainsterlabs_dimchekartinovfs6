@@ -80,25 +80,7 @@
   }
 }
 
-.wrapper {
-  margin-top: var.$gutter-base;
-  margin-bottom: (var.$gutter-base * 2);
-  padding-left: var.$gutter-base;
-  padding-right: var.$gutter-base;
-
-  @include mix.breakpoint('small', min) {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @include mix.breakpoint('medium', min) {
-    max-width: 1100px;
-  }
-
-  @include mix.breakpoint('large', min) {
-  }
-
+.cards-wrapper {
   .sub-heading {
     margin-bottom: var.$gutter-base;
     font-size: var.$heading-size;

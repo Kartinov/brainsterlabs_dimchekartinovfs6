@@ -19,7 +19,7 @@
 <body>
   <header>
     <div class="nav-wrapper">
-      <a class="logo" href="./index.html">
+      <a class="logo" href="./index.php">
         <img src="./assets/img/Logo.svg" alt="Brainster Logo">
       </a>
       <button class="menu-btn">

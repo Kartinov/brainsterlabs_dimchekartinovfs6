@@ -15,12 +15,13 @@ $font-size-big:              rem-calc(22);
 $heading-size:               rem-calc(40);
 
 $display-big:                clamp(($heading-size - 0.3rem), 10vw, ($heading-size * 2));
+$display-medium:             clamp(($heading-size - 0.5rem), 6vw, ($heading-size * 1.5));
 
 $line-height-normal:         1.2;
 $line-height-base:           1.5;
 
 $font-weight-normal:         400;
-$font-weight-medium:         600;
+$font-weight-medium:         500;
 $font-weight-bold:           700;
 
 // Size settings

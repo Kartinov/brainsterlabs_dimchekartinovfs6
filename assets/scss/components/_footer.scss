@@ -6,9 +6,6 @@ footer {
   text-align: center;
   background-color: var.$text-color-base;
   color: var.$text-color-primary;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   p {
     padding: (math.div(var.$gutter-base, 3)) (math.div(var.$gutter-base, 2));
     font-size: var.$font-size-small;
