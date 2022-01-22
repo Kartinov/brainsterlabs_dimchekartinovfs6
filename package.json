@@ -2,9 +2,9 @@
   "name": "brainster_labs_project01",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.php",
   "scripts": {
-    "start": "node index.js",
+    "start": "index.php",
     "server": "live-server",
     "compile:sass": "sass -w assets/scss:assets/css",
     "autoprefixer": "postcss assets/css/main.css --use autoprefixer -d assets/css"
