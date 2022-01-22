@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mix;
 @use 'sass:math';
+
 .form-wrapper {
   .hero-title {
     text-align: center;
@@ -50,8 +51,7 @@ form {
   select,
   .btn {
     padding: math.div(var.$gutter-base, 2);
-      font-size: var.$font-size-base;
-
+    font-size: var.$font-size-base;
   }
 
   input,
