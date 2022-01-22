@@ -55,4 +55,19 @@ class crud
       return false;
     }
   }
+
+  public function getAcademies()
+  {
+    try
+    {
+      $sql = "SELECT * FROM `academies`";
+      $result = $this->db->query($sql);
+      return $result;
+    }
+    catch (PDOException $e)
+    {
+      echo $e->getMessage();
+      return false;
+    }
+  }
 }

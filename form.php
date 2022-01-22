@@ -1,7 +1,9 @@
 <?php
 $title = "Student Request";
-require_once './assets/includes/header.php'; 
+require_once './assets/includes/header.php';
 require_once './assets/db/conn.php';
+
+$results = $crud->getAcademies();
 ?>
 
 <section class="form-wrapper wrapper">
@@ -28,10 +30,14 @@ require_once './assets/db/conn.php';
       <div class="select">
         <select name="academy" id="academy">
           <option value="" hidden>Изберете тип на студент</option>
-          <option value="1">Маркетинг</option>
-          <option value="2">Програмирање</option>
-          <option value="3">Дата наука</option>
-          <option value="4">Дизајн</option>
+
+          <?php while ($r = $results->fetch(PDO::FETCH_ASSOC))
+          { ?>
+            <option value="<?= $r['academy_id'] ?>">
+              <?= $r['academy'] ?>
+            </option>
+          <?php } ?>
+
         </select>
       </div>
     </div>
