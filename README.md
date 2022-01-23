@@ -16,3 +16,4 @@ This project is intended for companies who need well trained students from:
 - SCSS
 - JavaScript
 - PHP
+- MySQL
