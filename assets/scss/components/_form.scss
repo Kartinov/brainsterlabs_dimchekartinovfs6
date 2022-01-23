@@ -3,7 +3,7 @@
 @use 'sass:math';
 
 .form-wrapper {
-  margin-bottom: (var.$gutter-base * 4);
+  margin-bottom: (var.$gutter-base * 6);
   .hero-title {
     text-align: center;
     font-size: var.$display-medium;
