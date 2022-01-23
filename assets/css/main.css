@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -72,14 +72,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-}
 h1::first-letter,
 h2::first-letter,
 h3::first-letter,
@@ -147,10 +139,13 @@ a {
   font-weight: 500;
   user-select: none;
   cursor: pointer;
-  transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out;
 }
 .btn:hover {
-  background-color: #cc0f00;
+  background-color: #db1000;
+}
+.btn:focus {
+  transform: scale(0.98);
 }
 
 .wrapper {
@@ -165,7 +160,17 @@ a {
 }
 @media (min-width: 768px) {
   .wrapper {
-    max-width: 1000px;
+    max-width: 740px;
+  }
+}
+@media (min-width: 992px) {
+  .wrapper {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1100px;
   }
 }
 
@@ -198,6 +203,7 @@ header .nav-wrapper {
 }
 header .nav-wrapper .logo {
   width: clamp(3.1875rem, 5vw, 4.125rem);
+  -webkit-tap-highlight-color: transparent;
 }
 header .nav-wrapper ul.nav-menu-items {
   list-style: none;
@@ -231,7 +237,7 @@ header .nav-wrapper ul.nav-menu-items {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    font-weight: 700;
+    font-weight: 600;
     padding-left: 0.625rem;
     font-size: 0.875rem;
   }
@@ -377,10 +383,13 @@ section.hero-image h1.hero-title {
   font-weight: 500;
   background-color: #37383a;
   color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
   padding-right: 3.75rem;
   padding-left: 0.9375rem;
+  -webkit-tap-highlight-color: transparent;
 }
 .card-menu button.trigger br {
   display: none;
@@ -474,6 +483,9 @@ section.hero-image h1.hero-title {
     margin-right: -1.875rem;
   }
 }
+.cards .card {
+  -webkit-tap-highlight-color: transparent;
+}
 .cards .card-inner {
   display: block;
   border-radius: 15px;
@@ -501,6 +513,7 @@ section.hero-image h1.hero-title {
   object-fit: cover;
   object-position: center;
   height: 200px;
+  user-select: none;
 }
 @media (min-width: 410px) {
   .cards .card-thumbnail img {
@@ -655,7 +668,7 @@ form select {
 }
 form .btn {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   display: block;
   width: 100%;
 }

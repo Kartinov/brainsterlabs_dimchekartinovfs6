@@ -17,7 +17,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
   &::first-letter {
     text-transform: capitalize;
   }
@@ -78,9 +77,12 @@ a {
   font-weight: var.$font-weight-medium;
   user-select: none;
   cursor: pointer;
-  transition: background-color var.$transition-normal ease-out;
+   transition: background-color var.$transition-normal ease-in-out;
   &:hover {
-    background-color: darken(var.$background-color-secondary, 10%);
+    background-color: darken(var.$background-color-secondary, 7%);
+  }
+  &:focus {
+    transform: scale(0.98);
   }
 }
 
@@ -97,6 +99,12 @@ a {
   margin-right: auto;
 
   @include mix.breakpoint('medium', min) {
-    max-width: 1000px;
+    max-width: 740px;
+  }
+  @include mix.breakpoint('large', min) {
+    max-width: 900px;
+  }
+  @include mix.breakpoint('x-large', min) {
+    max-width: 1100px;
   }
 }

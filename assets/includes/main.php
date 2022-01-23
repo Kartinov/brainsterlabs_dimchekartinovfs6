@@ -12,10 +12,12 @@
         академијата<br> за дизајн<i class="fas fa-check-circle"></i></button>
     </div>
 
-    <div class="cards-wrapper wrapper">
-      <h2 class="sub-heading">Проекти</h2>
-      <section class="cards">
-        <!-- Appening elements -->
-      </section>
+    <div class="wrapper">
+      <div class="cards-wrapper">
+        <h2 class="sub-heading">Проекти</h2>
+        <section class="cards">
+          <!-- Appening elements -->
+        </section>
+      </div>
     </div>
   </main>

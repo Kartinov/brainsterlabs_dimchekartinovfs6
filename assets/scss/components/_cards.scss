@@ -15,11 +15,14 @@
     font-weight: var.$font-weight-medium;
     background-color: var.$text-color-base;
     color: var.$text-color-primary;
+    font-family: var.$font-family-primary;
+    font-weight: var.$font-weight-bold;
 
     padding-top: var.$gutter-base;
     padding-bottom: var.$gutter-base;
     padding-right: (var.$gutter-base * 2);
     padding-left: (math.div(var.$gutter-base, 2));
+    -webkit-tap-highlight-color: transparent;
     br {
       display: none;
       @include mix.breakpoint('custom-small', min) {
@@ -94,10 +97,11 @@
 }
 
 .cards {
-  @include mix.breakpoint('medium', min) {
+   @include mix.breakpoint('medium', min) {
     margin-right: -(var.$gutter-base);
   }
   .card {
+    -webkit-tap-highlight-color: transparent;
     &-inner {
       display: block;
       border-radius: var.$radius * 3;
@@ -122,6 +126,7 @@
         object-fit: cover;
         object-position: center;
         height: 200px;
+        user-select: none;
         @include mix.breakpoint('custom-small', min) {
           height: 250px;
         }
