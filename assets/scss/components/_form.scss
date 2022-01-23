@@ -20,10 +20,10 @@
 form {
   .form-group {
     &:not(:first-child, :last-child) {
-      margin-top: math.div(var.$gutter-base, 2);
+      margin-top: var.$gutter-base;
     }
     &:last-child {
-      margin-top: (var.$gutter-base * 1.5);
+      margin-top: (var.$gutter-base * 2);
     }
   }
 
@@ -31,6 +31,13 @@ form {
     margin-bottom: math.div(var.$gutter-base, 2);
     font-size: var.$font-size-medium;
     font-weight: var.$font-weight-medium;
+  }
+
+  input {
+    border: 2px solid transparent;
+    &:valid {
+      border: 2px solid var.$success;
+    }
   }
 
   .select {
@@ -79,7 +86,7 @@ form {
     .form-group {
       flex: 0 1 50%;
       &:nth-child(2n + 1) {
-        padding-right: 15px;
+        padding-right: var.$gutter-base;
       }
       &:last-child {
         margin-top: 0;

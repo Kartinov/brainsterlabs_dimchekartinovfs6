@@ -631,15 +631,21 @@ footer i {
 }
 
 form .form-group:not(:first-child, :last-child) {
-  margin-top: 0.9375rem;
+  margin-top: 1.875rem;
 }
 form .form-group:last-child {
-  margin-top: 2.8125rem;
+  margin-top: 3.75rem;
 }
 form label {
   margin-bottom: 0.9375rem;
   font-size: 1.125rem;
   font-weight: 500;
+}
+form input {
+  border: 2px solid transparent;
+}
+form input:valid {
+  border: 2px solid #009b00;
 }
 form .select {
   position: relative;
@@ -686,7 +692,7 @@ form .btn {
     flex: 0 1 50%;
   }
   form .form-group:nth-child(2n+1) {
-    padding-right: 15px;
+    padding-right: 1.875rem;
   }
   form .form-group:last-child {
     margin-top: 0;
