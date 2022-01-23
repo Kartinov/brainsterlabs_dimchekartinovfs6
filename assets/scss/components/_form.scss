@@ -9,6 +9,12 @@
     margin-top: var.$gutter-base * 2;
     margin-bottom: var.$gutter-base * 2;
   }
+
+  & + footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 form {

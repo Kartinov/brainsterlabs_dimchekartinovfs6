@@ -3,9 +3,7 @@ require_once './assets/includes/header.php';
 require_once "assets/db/conn.php"; 
 ?>
 
-<div class="wrapper">
-  
-</div>
+<div class="form-wrapper wrapper">
 
 <?php
 if (isset($_POST['submit']))
@@ -22,11 +20,14 @@ if (isset($_POST['submit']))
 
   if ($isSuccess)
   {
+    echo "<h2></h2>"
   }
   else
   {
     echo "ERROR";
   }
 }
+
+echo "</div>";
 
 require_once './assets/includes/footer.php'; ?>

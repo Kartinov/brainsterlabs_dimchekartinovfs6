@@ -153,7 +153,6 @@ a {
   margin-bottom: 3.75rem;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  height: 100%;
   max-width: 450px;
   margin-left: auto;
   margin-right: auto;
@@ -624,6 +623,11 @@ footer i {
   font-size: clamp(2rem, 6vw, 3.75rem);
   margin-top: 3.75rem;
   margin-bottom: 3.75rem;
+}
+.form-wrapper + footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 form .form-group:not(:first-child, :last-child) {
