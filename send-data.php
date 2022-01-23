@@ -20,11 +20,11 @@ if (isset($_POST['submit']))
 
   if ($isSuccess)
   {
-    echo "<h2></h2>"
+    echo '<h2 style="text-align: center;" class="display-big">Успешна апликација</h2>';
   }
   else
   {
-    echo "ERROR";
+    echo '<h2 style="text-align: center;" class="display-big">Неуспешно, обидете се повторно</h2>';
   }
 }
 
