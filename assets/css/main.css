@@ -619,7 +619,7 @@ footer i {
 }
 
 .form-wrapper {
-  margin-bottom: 11.25rem;
+  min-height: 80vh;
 }
 .form-wrapper .hero-title {
   text-align: center;
