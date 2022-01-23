@@ -3,17 +3,12 @@
 @use 'sass:math';
 
 .form-wrapper {
+  margin-bottom: (var.$gutter-base * 4);
   .hero-title {
     text-align: center;
     font-size: var.$display-medium;
     margin-top: var.$gutter-base * 2;
     margin-bottom: var.$gutter-base * 2;
-  }
-
-  & + footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
   }
 }
 
@@ -93,5 +88,15 @@ form {
         align-self: flex-end;
       }
     }
+  }
+}
+
+// div from send-data.php
+
+.success-wrapper {
+  & + footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 }

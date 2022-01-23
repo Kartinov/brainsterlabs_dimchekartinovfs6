@@ -618,16 +618,14 @@ footer i {
   color: #ff1300;
 }
 
+.form-wrapper {
+  margin-bottom: 7.5rem;
+}
 .form-wrapper .hero-title {
   text-align: center;
   font-size: clamp(2rem, 6vw, 3.75rem);
   margin-top: 3.75rem;
   margin-bottom: 3.75rem;
-}
-.form-wrapper + footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 form .form-group:not(:first-child, :last-child) {
@@ -698,6 +696,12 @@ form .btn {
     margin-top: 0;
     align-self: flex-end;
   }
+}
+
+.success-wrapper + footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .container {

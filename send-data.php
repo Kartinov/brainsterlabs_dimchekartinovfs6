@@ -3,7 +3,7 @@ require_once './assets/includes/header.php';
 require_once "assets/db/conn.php"; 
 ?>
 
-<div class="form-wrapper wrapper">
+<div class="success-wrapper wrapper">
 
 <?php
 if (isset($_POST['submit']))
