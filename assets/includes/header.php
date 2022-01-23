@@ -28,10 +28,10 @@
         <span></span>
       </button>
       <ul class="nav-menu-items">
-        <li><a href="#" class="menu-item">Академија за<br> маркетинг</a></li>
-        <li><a href="#" class="menu-item">Академија за<br> програмирање</a></li>
-        <li><a href="#" class="menu-item">Академија за<br> data science</a></li>
-        <li><a href="#" class="menu-item">Академија за<br> дизајн</a></li>
+        <li><a href="https://brainster.co/marketing/" target="_blank" class="menu-item grow">Академија за<br> маркетинг</a></li>
+        <li><a href="https://brainster.co/full-stack/" target="_blank" class="menu-item grow">Академија за<br> програмирање</a></li>
+        <li><a href="https://brainster.co/data-science/" target="_blank" class="menu-item grow">Академија за<br> data science</a></li>
+        <li><a href="https://brainster.co/graphic-design/" target="_blank" class="menu-item grow">Академија за<br> дизајн</a></li>
         <a href="./form.php" class="btn">Вработи наш студент</a>
       </ul>
     </div>

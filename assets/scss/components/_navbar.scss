@@ -3,21 +3,14 @@
 @use 'sass:math';
 
 header {
-  // For fixed navbar, un-comment this commented styles :)
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // background-color: var.$background-color-primary;
-
   box-shadow: var.$shadow-bottom;
 
   .nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: math.div(var.$gutter-base, 2);
+
     @include mix.breakpoint('custom-medium', min) {
       padding-top: math.div(var.$gutter-base, 1.5);
       padding-bottom: math.div(var.$gutter-base, 1.5);
@@ -30,11 +23,11 @@ header {
     }
 
     @include mix.breakpoint('xx-large', min) {
-      max-width: 1480px;
+      max-width: 1400px;
     }
 
     .logo {
-      width: clamp((var.$gutter-base * 1.7), 5vw, (var.$gutter-base * 2.5));
+      width: clamp((var.$gutter-base * 1.7), 5vw, (var.$gutter-base * 2.2));
     }
 
     ul.nav-menu-items {
@@ -44,6 +37,7 @@ header {
       align-items: flex-start;
 
       @include mix.breakpoint('custom-medium', max) {
+        z-index: 1;
         flex-direction: column;
         position: fixed;
         top: 0;
@@ -66,7 +60,7 @@ header {
         align-items: center;
         justify-content: flex-end;
         width: 100%;
-        font-weight: var.$font-weight-medium;
+        font-weight: var.$font-weight-bold;
         padding-left: math.div(var.$gutter-base, 3);
         font-size: var.$font-size-small;
       }
@@ -86,16 +80,13 @@ header {
 
         a {
           color: var.$text-color-primary;
-          transition: color var.$transition-normal ease-out;
+          transition: transform var.$transition-normal linear;
           &:hover {
-            color: darken(var.$text-color-primary, 15%);
+            transform: scale(1.05);
+            // color: darken(var.$text-color-primary, 15%);
           }
           @include mix.breakpoint('custom-medium', min) {
             color: var.$text-color-base;
-            transition: color var.$transition-normal ease-out;
-            &:hover {
-              color: darken(var.$text-color-base, 15%);
-            }
           }
         }
       }
@@ -103,12 +94,13 @@ header {
       .btn {
         margin-top: math.div(var.$gutter-base, 2);
         font-size: var.$font-size-base;
+        box-shadow: var.$shadow-card;
         @include mix.breakpoint('custom-medium', min) {
           font-size: var.$font-size-small;
           margin-top: 0;
         }
         @include mix.breakpoint('large', min) {
-         margin-left: clamp(var.$gutter-base, 10vw, (var.$gutter-base * 3));
+          margin-left: clamp(var.$gutter-base, 12vw, (var.$gutter-base * 3));
         }
       }
 
@@ -128,13 +120,13 @@ header {
       user-select: none;
       appearance: none;
       position: relative;
-      z-index: 99;
+      z-index: 2;
       border: none;
       outline: none;
       cursor: pointer;
       background-color: transparent;
       transform: scaleX(-1);
-      -webkit-tap-highlight-color: transparent; 
+      -webkit-tap-highlight-color: transparent;
       span {
         display: block;
         height: (var.$radius * 1.5);
