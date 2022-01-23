@@ -1,7 +1,13 @@
 <?php
+require_once './assets/includes/header.php';
+require_once "assets/db/conn.php"; 
+?>
 
-require_once "assets/db/conn.php";
+<div class="wrapper">
+  
+</div>
 
+<?php
 if (isset($_POST['submit']))
 {
   // extract values from the $_POST array
@@ -16,10 +22,11 @@ if (isset($_POST['submit']))
 
   if ($isSuccess)
   {
-    header("Location: index.php");
   }
   else
   {
     echo "ERROR";
   }
 }
+
+require_once './assets/includes/footer.php'; ?>
