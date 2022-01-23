@@ -11,15 +11,15 @@ $results = $crud->getAcademies();
   <form class="d-flex" action="send-data.php" method="POST">
     <div class="form-group">
       <label for="name">Име и презиме</label>
-      <input type="text" id="name" name="name" placeholder="Вашето име и презиме" required maxlength="128" title="Името и презимето треба да бидат одвоени со празно место (e.g. firstname lastname)" pattern="[a-z]{2,63} [a-z]{2,64}" autofocus>
+      <input type="text" id="name" name="name" placeholder="Вашето име и презиме" required maxlength="128" title="Името и презимето треба да бидат одвоени со празно место (e.g. firstname lastname)" pattern="[A-Za-z]{2,63} [A-Za-z]{2,64}" autofocus>
     </div>
     <div class="form-group">
       <label for="company">Име на компанијата</label>
-      <input type="company" id="company" name="company" placeholder="Име на вашата компанија" required maxlength="128" title="Името на компанијата треба да содржи од 3 до 128 карактери" pattern="[a-z]{3,128}">
+      <input type="company" id="company" name="company" placeholder="Име на вашата компанија" required maxlength="128" title="Името на компанијата треба да содржи од 3 до 128 карактери" pattern="[A-Za-z]{3,128}">
     </div>
     <div class="form-group">
       <label for="email">Контакт имејл</label>
-      <input type="email" id="email" name="email" placeholder="Контакт имејл на вашата компанија" required maxlength="128" autocomplete="off">
+      <input type="email" id="email" name="email" placeholder="Контакт имејл на вашата компанија" required maxlength="128" title="Валидна емаил адреса на вашата компанија" autocomplete="off">
     </div>
     <div class="form-group">
       <label for="phone">Контакт телефон</label>
