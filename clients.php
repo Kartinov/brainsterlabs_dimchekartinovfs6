@@ -1,6 +1,9 @@
 <?php
-require_once './assets/db/conn.php';
+
+require_once('./assets/db/conn.php');
+
 $results = $crud->getClients();
+
 ?>
 
 <!DOCTYPE html>
@@ -27,8 +30,8 @@ $results = $crud->getClients();
           <th>Phone number</th>
           <th>Academy</th>
         </tr>
-        <?php while ($r = $results->fetch(PDO::FETCH_ASSOC))
-        { ?>
+
+        <?php while ($r = $results->fetch(PDO::FETCH_ASSOC)) : ?>
           <tr>
             <td><?php echo $r['client_id'] ?></td>
             <td><?php echo $r['name'] ?></td>
@@ -37,8 +40,8 @@ $results = $crud->getClients();
             <td><?php echo $r['phone'] ?></td>
             <td><?php echo $r['academy'] ?></td>
           </tr>
+        <?php endwhile ?>
 
-        <?php } ?>
       </table>
     </div>
   </div>
